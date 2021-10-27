@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">DI_Practica3_Ejercicio1_Tema3</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Coffee Shops</string>
+    <string name="second_fragment_label">Comentarios</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!-- Coffee Shops -->
+    <string name="cafe0">Antico Caffe Greco</string>
+    <string name="cafe1">Coffee Room</string>
+    <string name="cafe2">Coffee Ibiza</string>
+    <string name="cafe3">Pudding Coffee Shop</string>
+    <string name="cafe4">LExpress</string>
+    <string name="cafe5">Coffee Corner</string>
+    <string name="cafe6">Sweet Cup</string>
+
+    <string name="subtitulo0">St. Italy, Rome</string>
+    <string name="subtitulo1">St. Germany, Berlin</string>
+    <string name="subtitulo2">St. Colon Madrid</string>
+    <string name="subtitulo3">St. Diagonal, Barcelona</string>
+    <string name="subtitulo4">St. Picadilly Circus, London</string>
+    <string name="subtitulo5">St. Angel Guimera, Valencia</string>
+    <string name="subtitulo6">St. Kinkerstraat, Amsterdam</string>
+    <string name="reservar">Reservar</string>
+</resources>
