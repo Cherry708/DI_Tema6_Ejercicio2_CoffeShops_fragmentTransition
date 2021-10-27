@@ -11,6 +11,13 @@ import com.example.di_practica3_ejercicio1_tema3.databinding.FragmentSecondBindi
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
+
+//TERMINAR
+/*
+El layout de este fragment contiene un titulo cuyo texto debe ser
+el nombre del item shop seleccionado y un recycler view cuyo contenido
+son una serie de cardViews con text.
+ */
 class SecondFragment : Fragment() {
 
     private var _binding: FragmentSecondBinding? = null

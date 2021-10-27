@@ -36,8 +36,6 @@ class FirstFragment : Fragment() {
         _binding = FragmentFirstBinding.inflate(inflater, container, false)
         return binding.root
 
-
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -58,6 +56,11 @@ class FirstFragment : Fragment() {
         recView.adapter = adaptador
         recView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
+        /*
+        Al hacer click en uno de los elementos de la lista suministrada al adaptador
+        navegaremos al segundo fragmento, que contendra una lista de comentarios.
+        Se debe suministrar a SecondFragment el titulo del item seleccionado.
+         */
         adaptador.onClick = {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
