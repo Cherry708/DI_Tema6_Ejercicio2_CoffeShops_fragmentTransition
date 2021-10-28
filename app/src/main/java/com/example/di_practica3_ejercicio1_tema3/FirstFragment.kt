@@ -67,8 +67,11 @@ class FirstFragment : Fragment() {
             //bundleOf(listaItems.get(it).)
             val itemSeleccionado = listaShops[recView.getChildAdapterPosition(it)]
             /*
-            El titulo de ShopItem es un entero que apunta a un recurso, debemos llamara al recurso
-             */
+            El titulo de ShopItem es un entero que apunta a un recurso, debemos llamar al recurso
+
+            BundleOf define una clave y un valor, en el segundo framento usaremos la clave
+            para obtener el valor y asignarno a tvNombreTienda
+            */
             val bundle = bundleOf("tvNombreTienda" to resources.getString(itemSeleccionado.titulo))
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment, bundle)
         }
