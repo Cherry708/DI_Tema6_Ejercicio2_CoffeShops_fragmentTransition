@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -17,8 +18,6 @@ import com.example.di_practica3_ejercicio1_tema3.databinding.FragmentFirstBindin
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
 class FirstFragment : Fragment() {
-
-    val listaItems = ArrayList<ShopItem>()
 
     private var _binding: FragmentFirstBinding? = null
 
@@ -38,6 +37,7 @@ class FirstFragment : Fragment() {
 
     }
 
+    val listaItems = ArrayList<ShopItem>()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -59,9 +59,11 @@ class FirstFragment : Fragment() {
         /*
         Al hacer click en uno de los elementos de la lista suministrada al adaptador
         navegaremos al segundo fragmento, que contendra una lista de comentarios.
-        Se debe suministrar a SecondFragment el titulo del item seleccionado.
+        Se debe suministrar al SecondFragment el titulo del item shop seleccionado
+        para mostrarlo como tvNombreTienda en fragment_second.
          */
         adaptador.onClick = {
+            //bundleOf(listaItems.get(it).)
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
     }

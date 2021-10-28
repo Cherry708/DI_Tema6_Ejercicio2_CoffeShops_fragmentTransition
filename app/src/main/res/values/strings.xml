@@ -27,4 +27,12 @@
     <string name="subtitulo5">St. Angel Guimera, Valencia</string>
     <string name="subtitulo6">St. Kinkerstraat, Amsterdam</string>
     <string name="reservar">Reservar</string>
+
+    <!-- Comentarios genericos de CommentItem -->
+    <string name="comentario0">"Muy recomendable. Volvere seguro"</string>
+    <string name="comentario1">"Acogedor. Muy buen ambiente"</string>
+    <string name="comentario2">"Buenos precios"</string>
+    <string name="comentario3">"Servicio algo flojo"</string>
+    <string name="comentario4">"Para repetir… extensa carta de cafes"</string>
+
 </resources>

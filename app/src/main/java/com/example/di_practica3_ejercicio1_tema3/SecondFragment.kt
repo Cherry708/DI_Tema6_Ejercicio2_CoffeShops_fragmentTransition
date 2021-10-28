@@ -6,6 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.di_practica2_ejercicio4_tema3.ShopItem
+import com.example.di_practica2_ejercicio4_tema3.ShopItemAdapter
 import com.example.di_practica3_ejercicio1_tema3.databinding.FragmentSecondBinding
 
 /**
@@ -36,8 +41,25 @@ class SecondFragment : Fragment() {
 
     }
 
+    val listaItems = ArrayList<CommentItem>()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        listaItems.add(CommentItem(R.string.comentario0))
+        listaItems.add(CommentItem(R.string.comentario1))
+        listaItems.add(CommentItem(R.string.comentario2))
+        listaItems.add(CommentItem(R.string.comentario3))
+        listaItems.add(CommentItem(R.string.comentario4))
+
+
+        val recView = view.findViewById<RecyclerView>(R.id.rvComentarios)
+        recView.setHasFixedSize(true)
+
+        val adaptador = CommentItemAdapter(listaItems)
+        recView.adapter = adaptador
+        recView.layoutManager = GridLayoutManager(context, 2)
+
+        adaptador.onClick = {}
     }
 
     override fun onDestroyView() {

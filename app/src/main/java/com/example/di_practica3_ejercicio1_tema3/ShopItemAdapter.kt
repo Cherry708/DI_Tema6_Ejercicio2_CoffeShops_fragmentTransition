@@ -42,7 +42,7 @@ class ShopItemAdapter(var listaItems: ArrayList<ShopItem>) : RecyclerView.Adapte
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ItemViewHolder {
-        val itemView = LayoutInflater.from(viewGroup.context).inflate(R.layout.card_item, viewGroup, false)
+        val itemView = LayoutInflater.from(viewGroup.context).inflate(R.layout.shop_item, viewGroup, false)
         return ItemViewHolder(itemView)
     }
 
