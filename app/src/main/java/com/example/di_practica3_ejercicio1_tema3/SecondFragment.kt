@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -36,9 +37,11 @@ class SecondFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        /*
         _binding = FragmentSecondBinding.inflate(inflater, container, false)
         return binding.root
-
+        */
+        return inflater.inflate(R.layout.fragment_second, container, false)
     }
 
     val listaItems = ArrayList<CommentItem>()
@@ -51,6 +54,8 @@ class SecondFragment : Fragment() {
         listaItems.add(CommentItem(R.string.comentario3))
         listaItems.add(CommentItem(R.string.comentario4))
 
+        val nombreTienda = view.findViewById<TextView>(R.id.tvNombreTienda)
+        nombreTienda.text = (arguments?.getString("tvNombreTienda"))
 
         val recView = view.findViewById<RecyclerView>(R.id.rvComentarios)
         recView.setHasFixedSize(true)
