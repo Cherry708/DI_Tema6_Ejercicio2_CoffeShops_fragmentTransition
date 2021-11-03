@@ -24,6 +24,19 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
 
+        /*
+        Definimos un navigation controller con el metodo
+        findNavController y le suministramos el id del fragmento principal.
+        Este fragmento principal cuenta con navgraph y en ese navgraph tenemos presente
+        el fragment de inicio y la navegacion.
+
+        En este componente es en el que se muestra cada uno de los fragmentos a traves del grafo
+        de navegacion definido y referenciado en el.
+
+        La configuracion de appBarConfiguration permite que el aspecto de esta
+        cambie y se adapte a las necesidades, facilita, por ejemplo, un boton de
+        "atras" cuando navegamos mas alla del fragmento de inicio.
+         */
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)

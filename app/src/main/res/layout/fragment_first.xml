@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FirstFragment">
-
+<!-- Los fragmentos tienen un comportamiento similar a las activities por lo que su composicion
+ es muy parecida-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvShops"
         android:layout_width="match_parent"

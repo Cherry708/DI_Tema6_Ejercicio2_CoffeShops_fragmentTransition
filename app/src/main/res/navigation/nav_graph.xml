@@ -4,7 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/FirstFragment">
+<!-- En este fichero definimos los fragmentos y la navegacion entre estos.
 
+ Cada framento tiene un id, un nombre, que hace referencia a la clase en la que se emplea,
+ la etiqueta, que es una referencia a strings donde encontraremos su etiqueta que
+ dara aspecto al titulo del fragment y el layout en el que se emplea el fragment.-->
     <fragment
         android:id="@+id/FirstFragment"
         android:name="com.example.di_practica3_ejercicio1_tema3.FirstFragment"
