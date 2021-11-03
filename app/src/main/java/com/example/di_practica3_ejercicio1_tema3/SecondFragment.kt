@@ -55,7 +55,7 @@ class SecondFragment : Fragment() {
         listaItems.add(CommentItem(R.string.comentario4))
 
         /*
-        Recogemos el valor de la clave del bundle
+        Recogemos el valor de la clave del bundle suministrado por FirstFragment
          */
         val nombreTienda = view.findViewById<TextView>(R.id.tvNombreTienda)
         nombreTienda.text = (arguments?.getString("tvNombreTienda"))

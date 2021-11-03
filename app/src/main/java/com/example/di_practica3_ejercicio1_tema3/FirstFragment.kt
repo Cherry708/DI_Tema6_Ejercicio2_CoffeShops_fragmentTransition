@@ -64,7 +64,6 @@ class FirstFragment : Fragment() {
         para mostrarlo como tvNombreTienda en fragment_second.
          */
         adaptador.onClick = {
-            //bundleOf(listaItems.get(it).)
             val itemSeleccionado = listaShops[recView.getChildAdapterPosition(it)]
             /*
             El titulo de ShopItem es un entero que apunta a un recurso, debemos llamar al recurso
