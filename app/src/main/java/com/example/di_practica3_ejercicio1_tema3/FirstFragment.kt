@@ -30,6 +30,18 @@ class FirstFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        /*
+        Añadir onCreate o en onView?
+         */
+        listaShops.add(ShopItem(R.drawable.images, R.string.cafe0, R.string.subtitulo0))
+        listaShops.add(ShopItem(R.drawable.images1, R.string.cafe1, R.string.subtitulo1))
+        listaShops.add(ShopItem(R.drawable.images2, R.string.cafe2, R.string.subtitulo2))
+        listaShops.add(ShopItem(R.drawable.images3, R.string.cafe3, R.string.subtitulo3))
+        listaShops.add(ShopItem(R.drawable.images4, R.string.cafe4, R.string.subtitulo4))
+        listaShops.add(ShopItem(R.drawable.images5, R.string.cafe5, R.string.subtitulo5))
+        listaShops.add(ShopItem(R.drawable.images6, R.string.cafe6, R.string.subtitulo6))
+
 /*
         _binding = FragmentFirstBinding.inflate(inflater, container, false)
         return binding.root
@@ -39,16 +51,9 @@ class FirstFragment : Fragment() {
     }
 
     val listaShops = ArrayList<ShopItem>()
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        listaShops.add(ShopItem(R.drawable.images, R.string.cafe0, R.string.subtitulo0))
-        listaShops.add(ShopItem(R.drawable.images1, R.string.cafe1, R.string.subtitulo1))
-        listaShops.add(ShopItem(R.drawable.images2, R.string.cafe2, R.string.subtitulo2))
-        listaShops.add(ShopItem(R.drawable.images3, R.string.cafe3, R.string.subtitulo3))
-        listaShops.add(ShopItem(R.drawable.images4, R.string.cafe4, R.string.subtitulo4))
-        listaShops.add(ShopItem(R.drawable.images5, R.string.cafe5, R.string.subtitulo5))
-        listaShops.add(ShopItem(R.drawable.images6, R.string.cafe6, R.string.subtitulo6))
 
         val recView = view.findViewById<RecyclerView>(R.id.rvShops)
         recView.setHasFixedSize(true)
