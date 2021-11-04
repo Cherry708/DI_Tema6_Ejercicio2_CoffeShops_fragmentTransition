@@ -33,29 +33,21 @@ class FirstFragment : Fragment() {
 
         /*
         Añadir onCreate o en onView?
+        Se ha de añadir en onCreate para evitar duplicados, por que?
          */
+        val listaShops = ArrayList<ShopItem>()
+
         listaShops.add(ShopItem(R.drawable.images, R.string.cafe0, R.string.subtitulo0))
         listaShops.add(ShopItem(R.drawable.images1, R.string.cafe1, R.string.subtitulo1))
         listaShops.add(ShopItem(R.drawable.images2, R.string.cafe2, R.string.subtitulo2))
         listaShops.add(ShopItem(R.drawable.images3, R.string.cafe3, R.string.subtitulo3))
         listaShops.add(ShopItem(R.drawable.images4, R.string.cafe4, R.string.subtitulo4))
         listaShops.add(ShopItem(R.drawable.images5, R.string.cafe5, R.string.subtitulo5))
-        listaShops.add(ShopItem(R.drawable.images6, R.string.cafe6, R.string.subtitulo6))
+        listaShops.add(ShopItem(R.drawable.images2, R.string.cafe6, R.string.subtitulo6))
 
-/*
         _binding = FragmentFirstBinding.inflate(inflater, container, false)
-        return binding.root
 
- */
-        return inflater.inflate(R.layout.fragment_first, container, false)
-    }
-
-    val listaShops = ArrayList<ShopItem>()
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        val recView = view.findViewById<RecyclerView>(R.id.rvShops)
+        val recView = binding.rvShops
         recView.setHasFixedSize(true)
 
         val adaptador = ShopItemAdapter(listaShops)
@@ -79,10 +71,13 @@ class FirstFragment : Fragment() {
             val bundle = bundleOf("tvNombreTienda" to resources.getString(itemSeleccionado.titulo))
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment, bundle)
         }
+
+        return binding.root
+
+        //return inflater.inflate(R.layout.fragment_first, container, false)
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)}
 }
