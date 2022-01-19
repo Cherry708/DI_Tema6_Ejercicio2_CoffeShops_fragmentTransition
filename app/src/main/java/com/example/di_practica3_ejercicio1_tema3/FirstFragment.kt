@@ -1,11 +1,17 @@
 package com.example.di_practica3_ejercicio1_tema3
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.core.app.ActivityOptionsCompat
 import androidx.core.os.bundleOf
+import androidx.core.util.Pair
+import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -68,8 +74,12 @@ class FirstFragment : Fragment() {
             BundleOf define una clave y un valor, en el segundo framento usaremos la clave
             para obtener el valor y asignarno a tvNombreTienda
             */
+
+            val tvTituloAnim: TextView = it.findViewById(R.id.tvTitulo)
+            val extras = FragmentNavigatorExtras(tvTituloAnim to "tituloTransition")
+
             val bundle = bundleOf("tvNombreTienda" to resources.getString(itemSeleccionado.titulo))
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment, bundle)
+            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment, bundle, null, extras)
         }
 
         return binding.root

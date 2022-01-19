@@ -6,12 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.di_practica2_ejercicio4_tema3.ShopItem
-import com.example.di_practica2_ejercicio4_tema3.ShopItemAdapter
+import androidx.transition.Transition
+import androidx.transition.TransitionInflater
 import com.example.di_practica3_ejercicio1_tema3.databinding.FragmentSecondBinding
 
 /**
@@ -41,6 +39,10 @@ class SecondFragment : Fragment() {
         _binding = FragmentSecondBinding.inflate(inflater, container, false)
         return binding.root
         */
+        val slide: Transition = TransitionInflater.from(activity).inflateTransition(R.transition.slide)
+        sharedElementEnterTransition = slide
+        sharedElementReturnTransition = slide
+
         return inflater.inflate(R.layout.fragment_second, container, false)
     }
 
@@ -67,7 +69,11 @@ class SecondFragment : Fragment() {
         recView.adapter = adaptador
         recView.layoutManager = GridLayoutManager(context, 2)
 
-        adaptador.onClick = {}
+
+
+        adaptador.onClick = {
+
+        }
     }
 
     override fun onDestroyView() {

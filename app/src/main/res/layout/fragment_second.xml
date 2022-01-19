@@ -16,7 +16,8 @@
         android:gravity="center"
         android:text="TextView"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:transitionName="tituloTransition"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvComentarios"
